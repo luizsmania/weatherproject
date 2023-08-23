@@ -1,0 +1,55 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+body {
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.4px;
+}
+
+#weather-status {
+    padding-top: 40px;
+    padding-bottom: 10px;
+    font-size: 3rem;
+    display: block;
+}
+
+#search-box {
+    margin-top: 0;
+}
+
+#city {
+    display: inline;
+    width: 40%;
+    justify-content: center;
+}
+
+#wicon {
+    width: 125px;
+    height: 125px;
+}
+
+#temperature {
+    font-size: 2.6rem;
+}
+
+#wind, #humidity, #max-temp, #min-temp {
+    font-size: 1.6rem;
+}
+
+#description{
+    font-size: 2rem;
+}
+
+.fa, .fas{
+    font-size: 18px;
+}
+
+.hide {
+    display: none;
+}
