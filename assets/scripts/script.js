@@ -11,3 +11,18 @@ async function getWeatherData(city) {
         alert("This is not a valid city name!");
     }
 };
+
+function updateDOM(city, data) {
+    var iconcode = data.weather[0].icon;
+    var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
+    $('#wicon').attr('src', iconurl);
+    $("#temperature").text(data.main.temp + " °C");
+    $("#max-temp").text("Highest: "+data.main.temp_max+" °C");
+    $("#min-temp").text("Lowest: "+data.main.temp_min+" °C");
+    $("#wind").text(`Wind: ${Math.floor(data.wind.speed * 3.6)} Km/h`);
+    $("#humidity").text("Humidity: "+data.main.humidity+" %");
+    $("#city-name").html(data.name+`<span id="country-name"class="badge badge-primary">Light</span>`);
+    $("#country-name").text(data.sys.country);
+    $("#description").text(data.weather[0].description);
+    $(".hide").removeClass("hide");
+};
