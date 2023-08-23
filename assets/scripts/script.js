@@ -26,3 +26,10 @@ function updateDOM(city, data) {
     $("#description").text(data.weather[0].description);
     $(".hide").removeClass("hide");
 };
+
+function searchCity() {
+    let city = $("#city").val();
+    getWeatherData(city);
+};
+
+$(":button").on("click", searchCity);
