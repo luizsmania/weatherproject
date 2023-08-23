@@ -12,6 +12,12 @@ async function getWeatherData(city) {
     }
 };
 
+function updateBackgroundImage(weather){
+    if (weather == "Clear") {
+        $(".bg-image").css({"background-image": "url(/assets/images/clear.jpg)"});
+    }
+};
+
 function updateDOM(city, data) {
     var iconcode = data.weather[0].icon;
     var iconurl = "http://openweathermap.org/img/w/" + iconcode + ".png";
@@ -25,6 +31,7 @@ function updateDOM(city, data) {
     $("#country-name").text(data.sys.country);
     $("#description").text(data.weather[0].description);
     $(".hide").removeClass("hide");
+    updateBackgroundImage(data.weather[0].main)
 };
 
 function searchCity() {
@@ -33,3 +40,4 @@ function searchCity() {
 };
 
 $(":button").on("click", searchCity);
+
