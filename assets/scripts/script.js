@@ -8,7 +8,7 @@ async function getWeatherData(city) {
         console.log(data);
         updateDOM(city, data);
     } catch (error) {
-        alert("This is not a valid city name!");
+        alert("Nome de cidade invalido. Verifique a ortografia. Acentos são necessários!");
     }
 };
 
