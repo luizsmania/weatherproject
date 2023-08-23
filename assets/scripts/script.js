@@ -37,7 +37,7 @@ function updateDOM(city, data) {
 };
 
 function searchCity() {
-    let city = $("#city").val();
+    let city = $("#city").val().toLowerCase();
     getWeatherData(city);
 };
 
