@@ -14,9 +14,9 @@ async function getWeatherData(city) {
 
 function updateBackgroundImage(weather){
     if (weather == "Clear") {
-        $(".bg-image").css({"background-image": "url(../assets/images/clear.jpg)"});
+        $(".bg-image").css({"background-image": "url(./assets/images/clear.jpg)"});
     } else {
-        $(".bg-image").css({"background-image": "url(../assets/images/clear_sky.jpg)"});
+        $(".bg-image").css({"background-image": "url(./assets/images/clear_sky.jpg)"});
     }
 };
 
